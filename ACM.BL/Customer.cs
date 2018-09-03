@@ -3,33 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ACM.BL
-{
-    public class Customer
-    {
-        public Customer()
-        {
-             
+namespace ACM.BL {
+    public class Customer {
+        public Customer() : this(0) {
+
         }
 
-        public Customer(int customerid)
-        {
+        public Customer(int customerid) {
             this.CustomerId = customerid;
+            AddressList = new List<Address>();
         }
+
+        //public Address WorkAddress { get; set; }
+        //public Address HomeAddress { get; set; }
+        public List<Address> AddressList { get; set; }
 
         public static int InstanceCount { get; set; }
 
         private string _lastName;
 
-        public string LastName
-        {
-            get
-            {
+        public string LastName {
+            get {
                 // any code
                 return _lastName;
             }
-            set
-            {
+            set {
                 // any code here
                 _lastName = value;
             }
@@ -40,16 +38,12 @@ namespace ACM.BL
         public string EmailAddress { get; set; }
 
         public int CustomerId { get; private set; }
-           
-        public string FullName
-        {
-            get
-            {
+
+        public string FullName {
+            get {
                 string fullName = LastName;
-                if (!string.IsNullOrWhiteSpace(FirstName))
-                {
-                    if (!string.IsNullOrWhiteSpace(fullName))
-                    {
+                if (!string.IsNullOrWhiteSpace(FirstName)) {
+                    if (!string.IsNullOrWhiteSpace(fullName)) {
                         fullName += ", ";
                     }
                     fullName += FirstName;
@@ -64,8 +58,7 @@ namespace ACM.BL
         /// <param name="customerid"></param>
         /// <returns></returns>
 
-        public bool Validate()
-        {
+        public bool Validate() {
             var isValid = true;
             if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;

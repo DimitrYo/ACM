@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Acme.Common {
     public class LoggingService {
-        public static void WriteToFile(List<Object> changedItems) {
+        public static void WriteToFile(List<ILoggable> changedItems) {
             foreach (var item in changedItems) {
-                // Console.WriteLine();
+                 Console.WriteLine(item.Log());
             }
 
         }

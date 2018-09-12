@@ -67,7 +67,11 @@ namespace ACM.BL {
         }
 
         public string Log() {
-            return "5";
+            var logString = this.CustomerId + ": " +
+                this.FullName + " " +
+                "Email: " + this.EmailAddress + " " +
+                "Status: " + this.EntityState.ToString();
+            return logString;
         }
     }
 }

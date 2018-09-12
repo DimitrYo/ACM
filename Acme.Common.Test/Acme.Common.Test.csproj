@@ -49,8 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringHandlerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoggingServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

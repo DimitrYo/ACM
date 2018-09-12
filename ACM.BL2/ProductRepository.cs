@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ACM.BL
 {
@@ -11,6 +12,10 @@ namespace ACM.BL
         public Product Retrive(int productId)
         {
             Product product = new Product(productId);
+
+            Object myObject = new Object();
+
+            Console.WriteLine("");
 
             if (productId == 1)
             {

@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ACM.BL2\ACM.BL.csproj">
+      <Project>{3b96d5d8-136a-4868-80e2-422cd3d70554}</Project>
+      <Name>ACM.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Acme.Common\Acme.Common.csproj">
       <Project>{1e0692b4-d3cd-4c92-9eda-1d862bfa80f4}</Project>
       <Name>Acme.Common</Name>

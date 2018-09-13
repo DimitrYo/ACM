@@ -70,7 +70,7 @@ namespace ACM.BL {
             var logString = this.CustomerId + ": " +
                 this.FullName + " " +
                 "Email: " + this.EmailAddress + " " +
-                "Status: " + this.EntityState.ToString();
+                "Status: " + this.EntityState;
             return logString;
         }
     }

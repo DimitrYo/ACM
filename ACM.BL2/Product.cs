@@ -44,7 +44,7 @@ namespace ACM.BL {
             var logString = this.Productid + ": " +
                 this.ProductName + " " +
                 "Detail: " + this.ProductDescription + " " +
-                "Status: " + this.EntityState.ToString();
+                "Status: " + this.EntityState;
             return logString;
         }
     }
